@@ -11,12 +11,12 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "ParseForm() err: %v", err)
 		return
 	}
-	fmt.Fprint(w, "POST request Successful")
+	fmt.Fprint(w, "POST request successful")
 	name := r.FormValue("name")
 	address := r.FormValue("address")
-	fmt.Fprint(w, "Name = %v", string(name))
-	fmt.Printf("Name = %v", string(name))
-	fmt.Fprint(w, "Address = %v\n", string(address))
+	fmt.Fprint(w, "Name =  ", name)
+	// fmt.Printf("Name = %s\n", name)
+	fmt.Fprint(w, "Address = ", address)
 }
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
